@@ -9,20 +9,55 @@ security posture before using it in production.
 
 ## Install
 
-Replace this section with the generated repository's installation steps.
+Install dependencies and build the CLI:
 
 ```sh
-pnpm install
+npm install
+npm run build
 ```
 
 ## Use
 
-Replace this section with the smallest useful example for the generated
-repository.
+Create a local context bundle from explicit file globs:
 
 ```sh
-pnpm dev
+npx ctxpin create \
+  --root . \
+  --include "src/**/*.ts" \
+  --include README.md \
+  --out .ctxpin/demo
 ```
+
+This writes:
+
+- `.ctxpin/demo/ctxpin.json` - machine-readable manifest with hashes, sizes, line counts, languages, redaction notes, and unresolved secret findings
+- `.ctxpin/demo/CTX.md` - readable context summary with included file contents
+
+Verify that the pinned files still match the manifest:
+
+```sh
+npx ctxpin verify .ctxpin/demo/ctxpin.json
+```
+
+Print the readable context summary again:
+
+```sh
+npx ctxpin summary .ctxpin/demo/ctxpin.json
+```
+
+Saved command output files can be pinned too:
+
+```sh
+npx ctxpin create \
+  --root . \
+  --include "src/**/*.ts" \
+  --command-output logs/test-output.txt \
+  --out .ctxpin/with-tests
+```
+
+By default, `ctxpin` refuses to create a bundle when unresolved secret-looking
+content is found. Redact the value first, or pass `--allow-secrets` when you
+intentionally want to pin that content.
 
 ## Verify
 
