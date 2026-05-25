@@ -1,0 +1,6 @@
+node_modules/
+dist/
+coverage/
+.ctxpin/
+*.log
+.DS_Store
