@@ -64,6 +64,12 @@ intentionally want to pin that content.
 Run the local validation script before opening a pull request:
 
 ```sh
+npm test
+npm run check
+npm run build
+npm run smoke
+npm run package:smoke
+npm run release:check
 bash scripts/validate.sh
 ```
 
