@@ -30,3 +30,6 @@ Use this list to keep release-readiness work concrete and reviewable.
 
 - Add fixture-backed tests for any uncovered bundle, redaction, or verification branch before expanding the command surface.
 - Refresh README examples when CLI output paths or manifest fields change.
+- Add fixture coverage for more language and file-type detection cases.
+- Improve examples for CI handoff workflows.
+- Document bundle-size limits and expected reviewer workflow.

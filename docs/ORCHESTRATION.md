@@ -26,3 +26,4 @@
 - Treat npm publishing and tagging as manual maintainer actions.
 - Include verification evidence in pull requests so release reviewers can reproduce the checks.
 - Prefer follow-up PRs for runtime or fixture changes that are not directly tied to release readiness.
+- Review `docs/release-candidate.md` and include manifest, hash, redaction, or CLI flag changes in release notes.
