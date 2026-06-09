@@ -73,7 +73,7 @@ bash scripts/validate.sh
 
 Use the same local checks that back release readiness:
 
-```bash
+```sh
 npm run check
 npm test
 npm run build
