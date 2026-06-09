@@ -4,8 +4,11 @@ This directory holds project documentation.
 
 ## Contents
 
+- [Task breakdown](TASKS.md)
+- [Orchestration plan](ORCHESTRATION.md)
 - [Contributing guide](../CONTRIBUTING.md)
 - [Security policy](../SECURITY.md)
+- [Release candidate checklist](release-candidate.md)
 - [Agent instructions](../AGENTS.md)
 
 ## Additional docs
