@@ -1,38 +1,32 @@
 name: CI
 
 on:
-  pull_request:
   push:
-    branches:
-      - main
-  workflow_dispatch:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 permissions:
   contents: read
 
 jobs:
-  release-readiness:
-    name: Release readiness
+  verify:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: package-lock.json
-
       - name: Install dependencies
-        run: |
-          if [ -f package-lock.json ]; then
-            npm ci
-          else
-            npm install
-          fi
-
-      - name: Run release checks
-        run: npm run release:check
+        run: npm ci
+      - name: npm run check
+        run: npm run check
+      - name: npm run build
+        run: npm run build
+      - name: npm test
+        run: npm test
+      - name: npm run smoke
+        run: npm run smoke
+      - name: npm run package:smoke
+        run: npm run package:smoke
