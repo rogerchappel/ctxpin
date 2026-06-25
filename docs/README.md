@@ -4,6 +4,7 @@ This directory holds project documentation.
 
 ## Contents
 
+- [Product requirements](PRD.md)
 - [Task breakdown](TASKS.md)
 - [Orchestration plan](ORCHESTRATION.md)
 - [Contributing guide](../CONTRIBUTING.md)

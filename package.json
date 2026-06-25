@@ -7,11 +7,16 @@
     "ctxpin": "./dist/cli.js"
   },
   "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    ".": "./dist/index.js"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
   },
   "files": [
     "dist",
+    "docs",
     "README.md",
     "LICENSE",
     "CHANGELOG.md",
@@ -36,6 +41,14 @@
   ],
   "author": "Roger Chappel",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rogerchappel/ctxpin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rogerchappel/ctxpin/issues"
+  },
+  "homepage": "https://github.com/rogerchappel/ctxpin#readme",
   "dependencies": {
     "commander": "^14.0.3",
     "fast-glob": "^3.3.3",
@@ -44,13 +57,5 @@
   "devDependencies": {
     "@types/node": "^25.9.1",
     "typescript": "^6.0.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rogerchappel/ctxpin.git"
-  },
-  "bugs": {
-    "url": "https://github.com/rogerchappel/ctxpin/issues"
-  },
-  "homepage": "https://github.com/rogerchappel/ctxpin#readme"
+  }
 }

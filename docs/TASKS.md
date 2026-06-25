@@ -1,6 +1,14 @@
 # ctxpin Task Breakdown
 
-Use this list to keep release-readiness work concrete and reviewable.
+## V1 MVP
+
+- [x] Scaffold a TypeScript CLI package with `create`, `verify`, and `summary` commands.
+- [x] Build deterministic context bundles with `ctxpin.json` and `CTX.md` outputs.
+- [x] Capture file hashes, sizes, line counts, language hints, and redaction notes.
+- [x] Respect ignore rules and explicit include globs.
+- [x] Block unresolved secret-looking content by default.
+- [x] Add fixture-backed tests and CLI smoke coverage.
+- [x] Document install, usage, contributing, security, and release verification.
 
 ## Current Release Tasks
 
@@ -8,12 +16,6 @@ Use this list to keep release-readiness work concrete and reviewable.
 - Run `npm run release:check` before opening release-readiness PRs.
 - Confirm package contents with `npm run package:smoke` after changing `files`, `bin`, or build output.
 - Review README examples against the current CLI flags whenever command parsing changes.
-
-## Follow-up Candidates
-
-- Add more fixtures for redaction edge cases.
-- Document expected bundle stability when file ordering or ignored paths change.
-- Expand smoke coverage for command-output bundles.
 
 ## Release readiness
 
@@ -28,6 +30,10 @@ Use this list to keep release-readiness work concrete and reviewable.
 
 ## Follow-up candidates
 
+- Add optional token estimates for common model families.
+- Add configurable redaction allowlists for project-specific placeholders.
+- Add SARIF or JSONL output for bundle verification in CI.
+- Add examples for pinning command output from test and build logs.
 - Add fixture-backed tests for any uncovered bundle, redaction, or verification branch before expanding the command surface.
 - Refresh README examples when CLI output paths or manifest fields change.
 - Add fixture coverage for more language and file-type detection cases.
