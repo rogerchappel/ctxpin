@@ -6,9 +6,10 @@ This directory holds project documentation.
 
 - [Product requirements](PRD.md)
 - [Task breakdown](TASKS.md)
-- [Orchestration notes](ORCHESTRATION.md)
+- [Orchestration plan](ORCHESTRATION.md)
 - [Contributing guide](../CONTRIBUTING.md)
 - [Security policy](../SECURITY.md)
+- [Release candidate checklist](release-candidate.md)
 - [Agent instructions](../AGENTS.md)
 
 ## Additional docs

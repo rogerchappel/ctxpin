@@ -64,10 +64,31 @@ intentionally want to pin that content.
 Run the local validation script before opening a pull request:
 
 ```sh
+npm test
+npm run check
+npm run build
+npm run smoke
+npm run package:smoke
+npm run release:check
 bash scripts/validate.sh
 ```
 
 `scripts/validate.sh` runs the repository's standard local checks when they are defined and will also run `agent-qc ready` when `agent-qc` is installed. Missing `agent-qc` is treated as a skip, not a failure.
+
+## Development
+
+Use the same local checks that back release readiness:
+
+```sh
+npm run check
+npm test
+npm run build
+npm run smoke
+npm run package:smoke
+npm run release:check
+```
+
+Run the narrower commands while iterating, then finish with the broadest available check before opening a PR.
 
 ## Contributing
 
