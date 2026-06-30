@@ -2,6 +2,20 @@
 
 Local-first deterministic context bundles for agent workflows.
 
+
+## Quickstart
+
+Run the tool from a fresh checkout:
+
+```sh
+npm install
+npm run build
+node dist/cli.js --help
+npm test
+```
+
+The help command is a quick smoke test for the CLI entrypoint, and `npm test` runs the committed regression suite before you depend on the output.
+
 ## Status
 
 This repository is early-stage. Confirm the current support, release, and
