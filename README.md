@@ -73,6 +73,17 @@ By default, `ctxpin` refuses to create a bundle when unresolved secret-looking
 content is found. Redact the value first, or pass `--allow-secrets` when you
 intentionally want to pin that content.
 
+## Limitations
+
+- `ctxpin` works from explicit local files and globs; it does not discover the
+  "right" project context for you.
+- Token counts and language detection are estimates intended for planning and
+  review, not billing or model-specific accounting.
+- The built-in secret scan is conservative. Review bundles before sharing them,
+  especially when using `--allow-secrets` or custom command output.
+- Verification proves file hashes still match the saved manifest. It does not
+  prove that the bundle is complete, current, or safe to send to a third party.
+
 ## Verify
 
 Run the local validation script before opening a pull request:
