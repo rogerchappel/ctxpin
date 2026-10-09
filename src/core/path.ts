@@ -13,7 +13,7 @@ export function resolveInsideRoot(root: string, input: string): string {
   const resolvedPath = path.resolve(resolvedRoot, input);
   const relative = path.relative(resolvedRoot, resolvedPath);
 
-  if (relative.startsWith('..') || path.isAbsolute(relative)) {
+  if (relative === '..' || relative.startsWith(`..${path.sep}`) || path.isAbsolute(relative)) {
     throw new Error(`Path escapes root: ${input}`);
   }
 
